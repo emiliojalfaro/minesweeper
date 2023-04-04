@@ -3,7 +3,7 @@ import CreateBoard from "../utils/CreateBoard";
 import Cell from "./Cell";
 import { revealed } from "../utils/Reveal";
 
-
+//used https://iq.opengenus.org/minesweeper-game-in-react-js/ to help with logic of this
 function Board() {
     const [grid,setGrid]=useState([]);
     const [nonMinecount,setNonMinecount]=useState(0);
@@ -17,8 +17,8 @@ function Board() {
     
     useEffect(()=>{
         const freshBoard = () => {
-            const newBoard=CreateBoard(10,10,20);
-            setNonMinecount(10*10-20);
+            const newBoard=CreateBoard(10,10,10);
+            setNonMinecount(10*10-10);
             // console.log(newBoard.mineLocation);
             setmineLocation(newBoard.mineLocation);
             setGrid(newBoard.board);
